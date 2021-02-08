@@ -1,108 +1,120 @@
 
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
- 
-      <style>
-            #v-tooltip {
-        position:absolute;
-         background:#000;
-         padding: 5;
-         color:#fff;
-         font-size: 13px;        
-         display:none;
-      
-      }
-        body{ font-family: Arial; background: #333; }
-a{ text-decoration: none; }
-#a1{
-display: flex;
-flex-wrap: wrap;
-}
-#a1 a{
-flex: 12.5%;
-padding: 10px 0;
-text-align: center;
-font-weight: bold;
-cursor: pointer;
-box-sizing: border-box;
-border: 1px solid #333;         
-margin: 0;
-background: #ff66cc;
-}
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      #v-tooltip {
+       position:absolute;
+       background:#f9f2e0;
+       padding: 10px;
+       
+       font-size: 13px;        
+       display:none;
+
+    }
+    body{ font-family: Arial; background: #333; }
+    a{ text-decoration: none; }
+    #a1{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   #a1 a{
+      flex: 12.5%;
+      padding: 10px 0;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      box-sizing: border-box;
+      border: 1px solid #333;         
+      margin: 0;
+      background: #ff66cc;
+   }
 
 
-#a2{
-display: flex;
-flex-wrap: wrap;
-}
-#a2 a{
-flex: 12.5%;
-padding: 10px 0;
-text-align: center;
-font-weight: bold;
-cursor: pointer;
-box-sizing: border-box;
-border: 1px solid #333;         
-margin: 0;
-background: #ff66cc;
-}
-#tab{ display: flex; width: 37.5%; float: left; }
-#tab a{     background: #bbb;  
-display: block;
-width: 100%;
-padding: 10px 0;
-text-align: center;}
-#tab a:hover , #tab a.act{ background: #646464 !important; color: #fff; }
-.page{ display: none; }
-#a1 a.t1{ background: #A9F5A9 }
-#a1 a.t2{ background: #d0a9f5 }
-#a1 a.t3{ background: #61ffa1 }
-#a1 a.t4{ background: #ffec00 }
-#a1 a.t5{ background: #b9edf8 }
-#a1 a.t6{ background: #ffb6b9 }
-#a1 a.t7{ background: #d0a9f5 }
-#a1 a.t8{ background: #61ffa1 }
-#a1 a.t9{ background: #ffb6b9 }
-#a2 a.t1{ background: #ffb6b9 }
-#a2 a.t2{ background: #d0a9f5 }
-#a2 a.t3{ background: #61ffa1 }
-#a2 a.t4{ background: #d0a9f5 }
-#a2 a.t5{ background: #81e0ff }
-#a2 a.t6{ background: #dadada }
-#a2 a.t7{ background: #ffb6b9 }
-#a1 a:hover , #a2 a:hover , #a1 a.act , #a2 a.act { background: #fff; color: #000;     border: 1px dashed #000;}
-#rtcAudioPath{ width: 100%; text-align: center; }
-.page{ display: none; }
-audio{ float: left; }
-.clear{ clear: both; }
-.clear15{ clear: both; height: 15px; }
-      </style>
-   </head>
-   <body>
+   #a2{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   #a2 a{
+      flex: 12.5%;
+      padding: 10px 0;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      box-sizing: border-box;
+      border: 1px solid #333;         
+      margin: 0;
+      background: #ff66cc;
+   }
+   #tab{ display: flex; width: 37.5%; float: right; }
+   #tab a{     background: #bbb;  
+      display: block;
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;}
+      #tab a:hover , #tab a.act{ background: #646464 !important; color: #fff; }
+      .page{ display: none; }
+      #a1 a.t1{ background: #A9F5A9 }
+      #a1 a.t2{ background: #d0a9f5 }
+      #a1 a.t3{ background: #61ffa1 }
+      #a1 a.t4{ background: #ffec00 }
+      #a1 a.t5{ background: #b9edf8 }
+      #a1 a.t6{ background: #ffb6b9 }
+      #a1 a.t7{ background: #d0a9f5 }
+      #a1 a.t8{ background: #61ffa1 }
+      #a1 a.t9{ background: #ffb6b9 }
+      #a2 a.t1{ background: #ffb6b9 }
+      #a2 a.t2{ background: #d0a9f5 }
+      #a2 a.t3{ background: #61ffa1 }
+      #a2 a.t4{ background: #d0a9f5 }
+      #a2 a.t5{ background: #81e0ff }
+      #a2 a.t6{ background: #dadada }
+      #a2 a.t7{ background: #ffb6b9 }
+      #a1 a:hover , #a2 a:hover , #a1 a.act , #a2 a.act { background: #fff; color: #000;     border: 1px dashed #000;}
+      #rtcAudioPath{ width: 100%; text-align: center; }
+      .page{ display: none; }
+      audio{ float: left; }
+      .clear{ clear: both; }
+      .clear15{ clear: both; height: 15px; }
+      #noidung{ width: 25%; float: left;   }
+      #noidung span{background: #f9f2e0; text-align: justify; display: block; padding: 20px;}
+      #button{ width: 75%; float: left; }
+   </style>
+</head>
+<body>
+
    
-<audio src="" controls=""></audio>
 
-<div class="clear15"></div>
+   <div class="clear15"></div>
 
-      <div id="tab">
-         <a class="act" href="#a1">Tab 1</a>
-         <a href="#a2">Tab 2</a>
-            <select id="rtcAudioPath">
+   <div id="tab">
+      <a class="act" href="#a1">Tab 1</a>
+      <a href="#a2">Tab 2</a>
+      <select id="rtcAudioPath">
          <option value="l">Nữ 1</option>
          <option value="a">Nữ 2</option>
          <option value="m">Nam 1</option>         
          <option value="j">Nữ 3</option>
       </select>
-      </div>
+   </div>
 
-      
 
-<div class="clear"></div>
 
-      <div id="a1" class="page" style="display: flex;">
+   <div class="clear"></div>
+
+   <div id="noidung">
+      <div class="clear15"></div>
+      <audio src="" controls=""></audio>
+      <div class="clear15"></div>
+       <span></span>
+   </div>
+
+   <div id="button">
+
+           <div id="a1" class="page" style="display: flex;">
 
 
          <a class="t1" file="1-1-1" title="A-lô">A-lô</a>
@@ -609,20 +621,17 @@ audio{ float: left; }
          <a class="t7" file="2-17-8" title="Gia viên">Gia viên</a>
     
    </div>
-    
-         <script src="jquery-1.12.4.min.js"></script> 
-         <script src="jquery.simple-tooltip.js"></script>   
-         
-         <script type="text/javascript">
-            $(document).ready( function(){
-            
-               // $("a").each( function(){
-               //    var link = $(this).attr("file");
-               //    $(this).removeAttr("class fid title dsp ftype")
-               //    $("#re").append("https://w-sg.unetcall.com/"+link + "\n");
-            
-               // })
 
+   </div>
+
+
+
+   <script src="jquery-1.12.4.min.js"></script> 
+   
+
+   <script type="text/javascript">
+      $(document).ready( function(){
+            
                $("#tab a").click( function(){
                   var id = $(this).attr("href");
                   $(".page").hide();                  
@@ -633,10 +642,10 @@ audio{ float: left; }
 
                })
 
-         $(".page a").click( function(){
-            var loai = $("#rtcAudioPath").val();
-            var mp3 = $(this).attr("file");
-            
+               $(".page a").click( function(){
+                  var loai = $("#rtcAudioPath").val();
+                  var mp3 = $(this).attr("file");
+
             // $.get(txt, function(data){
             //    $("#a4 pre").text(data);
             // });            
@@ -655,14 +664,14 @@ audio{ float: left; }
          });
 
 
-   $('.page a').simpleTooltip({
-          title: 'me is a tooltip'
-   });
+               $('.page a').simpleTooltip({
+                 title: 'me is a tooltip'
+              });
 
 
-            
+
             })
          </script>
-      
-   </body>
-</html>
+<script src="jquery.simple-tooltip.js"></script>   
+      </body>
+      </html>

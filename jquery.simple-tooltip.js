@@ -31,6 +31,9 @@ Originally extracted from the easy to use CMS Venio at http://venio.se.
   	  		.css("top",(e.pageY - opts.xOffset) + "px")
   	  		.css("left",(e.pageX + opts.yOffset) + "px");
   	  });
+      me.click(function(e){
+          $("#noidung span").html(originalTitle);
+      });
 	  });
 	}
 	
