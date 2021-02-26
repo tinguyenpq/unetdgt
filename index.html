@@ -16,7 +16,7 @@
 
     }
     body{ font-family: Arial; background: #333; }
-    a{ text-decoration: none; }
+    a{ text-decoration: none; font-size: 13px; }
     #a1{
       display: flex;
       flex-wrap: wrap;
@@ -132,14 +132,26 @@
    <div class="clear15"></div>
 
    <div id="tab">
+
       <a class="act" href="#a1">Page 1</a>
       <a href="#a2">Page 2</a>
       <a href="#a4">Page 4</a>
       <select id="rtcAudioPath">
          <option value="l">Nữ 1</option>
-         <!-- <option value="a">Nữ 2</option>
+         <option value="a">Nữ 2</option>
          <option value="m">Nam 1</option>         
-         <option value="j">Nữ 3</option> -->
+         <option value="j">Nữ 3</option>         
+         <option value="h">Nữ 5</option>
+         <option value="b">Nữ 6</option>
+         <option value="c">Nữ 7</option>
+         <option value="m4">Nam 4</option>
+         <option value="w9">Nữ 9</option>
+         <option value="w10">Nữ 10</option>
+         <option value="w11">Nữ 11</option>
+         <option value="w12">Nữ 12</option>
+         <option value="w13">Nữ 13</option>
+         <option value="w14">Nữ 14</option>
+         
       </select>
    </div>
 
@@ -148,6 +160,7 @@
    <div class="clear"></div>
 
    <div id="noidung">
+      <h3 style="color: #fff">Đã thêm đủ 14 giọng ở Page 1</h3>
       <div class="clear15"></div>
       <audio src="" controls=""></audio>
       <div class="clear15"></div>
@@ -818,7 +831,6 @@
          
 
 
-
    </div> 
 
    </div>
@@ -852,12 +864,9 @@
             $(this).addClass("act");
 
             var audio = $("audio");
-            if (loai=="m") {
-               audio.attr("src",loai + "/" +mp3+"_2" + ".mp3");
-            }
-            else{
+            
                audio.attr("src",loai + "/" +mp3 + ".mp3");
-            }
+            
             
             audio[0].play();
          });
